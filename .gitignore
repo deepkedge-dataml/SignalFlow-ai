@@ -1,0 +1,71 @@
+# IDE
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment files
+.env
+.env.*
+
+# Local OS files
+.DS_Store
+Thumbs.db
+
+# Project data and outputs
+data/
+results/
+
+# Python cache
+__pycache__/
+*.pyc
+
+
+# Ignore experiment outputs
+# Ignore experiment outputs
+experiments/*/heatmaps/
+experiments/*/overlays/
+experiments/*/*.png
+
+# Ignore all experiment run folders
+experiments/juice_bottle_res256_*/
+
+# Keep only one run folder
+!experiments/juice_bottle_res256_20260320_214217/
+!experiments/juice_bottle_res256_20260320_214217/**
+
+# But ignore generated images inside that kept run
+experiments/juice_bottle_res256_20260320_214217/heatmaps/
+experiments/juice_bottle_res256_20260320_214217/overlays/
+experiments/juice_bottle_res256_20260320_214217/**/*.png
+
+# Keep important experiment scripts
+!experiments/langchain_structured_explainer.py
+!experiments/plain_prompt_baseline.py
+!experiments/sarvam_iterative_test.py
+
+# Ignore scratch/test scripts
+experiments/llama_testing.py
+experiments/sarvam_test.py
+experiments/additonal_codes_testting.py
+experiments/patchcore/additional_codes_testting.py
+experiments/patchcore/llama_testing.py
+experiments/patchcore/sarvam_test.py
+
+# Model or registry artifacts
+*.ckpt
+*.pt
+*.pth
