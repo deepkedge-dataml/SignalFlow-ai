@@ -107,16 +107,20 @@ SignalFlow-ai/
 ├── environment.yml
 ├── configs/
 ├── src/
-│   ├── patchcore_pipeline.py
-│   ├── export_registry.py
-│   ├── overlay_generator.py
-│   └── llm_reasoner.py
+│ ├── patchcore_pipeline.py # Core anomaly detection pipeline
+│ ├── export_registry.py # Output + metadata handling
+│ ├── overlay_generator.py # Heatmap & overlay visualization
+│ └── llm_reasoner.py # LLM-based reasoning layer
 ├── experiments/
-│   ├── langchain_structured_explainer.py
-│   └── juice_bottle_res256_20260320_214217/
+│ ├── langchain_structured_explainer.py
+│ ├── plain_prompt_baseline.py
+│ ├── sarvam_iterative_test.py
+│ └── juice_bottle_res256_.../ # Sample experiment output
+├── samples/
+│ ├── heatmaps/
+│ └── overlays/
 ├── results/
 └── .gitignore
-
 ```
 
 ## How the Project Works
@@ -171,11 +175,18 @@ This enables comparison between:
 
 These are the most important files to review first:
 
-- `src/patchcore_pipeline.py`
-- `src/export_registry.py`
-- `src/overlay_generator.py`
-- `src/llm_reasoner.py`
-- `experiments/langchain_structured_explainer.py`
+These are the most important files to review first:
+
+### Core pipeline
+- src/patchcore_pipeline.py
+- src/export_registry.py
+- src/overlay_generator.py
+- src/llm_reasoner.py
+
+### Experiment scripts
+- experiments/langchain_structured_explainer.py  (structured LLM reasoning)
+- experiments/plain_prompt_baseline.py          (baseline comparison)
+- experiments/sarvam_iterative_test.py          (iterative reasoning approach)
 
 ### Registry as the Bridge Layer
 
