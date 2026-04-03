@@ -175,8 +175,6 @@ This enables comparison between:
 
 These are the most important files to review first:
 
-These are the most important files to review first:
-
 ### Core pipeline
 - src/patchcore_pipeline.py
 - src/export_registry.py
